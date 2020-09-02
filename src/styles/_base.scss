@@ -13,7 +13,7 @@ html{
     font-size: 62.5%;
 
     @include response(tab-land){ //width<1200px (900-1200px)
-        font-size: 44%;
+        font-size: 56%;
     }
 
     @include response(tab-port){ //width<900px (600-900px)
