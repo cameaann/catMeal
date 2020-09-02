@@ -1,0 +1,23 @@
+<div class="card-container" >
+    <div class="back" (click)= "toggleItemSelected()" [ngClass]= "cardClasses()" (mouseleave)="acceptItem()">
+        <div class="card">
+            <div class="card__heading">Сказочное заморское яство</div>
+            <div class="card__title">{{product.title}}</div>
+            <div class="card__description">{{product.description}}</div>
+            <div class="card__productPortions">{{product.portionsCount}} порций</div>
+            <div class="card__bonus">{{product.bonus}}</div>
+            <div class="card__bonus" *ngIf = 'product.extraText'>{{product.extraText}}</div>
+            <div class="card__box" >
+                <span class="weight">{{product.weight}} <span class="weight-units">кг</span></span>
+            </div>
+        </div>
+    </div>    
+    <div class="card__text" >
+        {{this.cardMessage()}}
+        <a *ngIf="!selected && productInStock()" href="#" class="card__link" (click)=toggleItemSelected()>
+            купи.
+        </a>
+    </div>
+
+    
+</div>

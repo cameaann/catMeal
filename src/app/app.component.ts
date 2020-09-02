@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PRODUCTS } from '../app/products-db';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'catApp';
+  
+
+  ngOnInit(){}
 }
